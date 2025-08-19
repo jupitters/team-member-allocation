@@ -2,9 +2,9 @@ import React from 'react'
 
 const Content = () => {
   return (
-    <div>
+    <main>
         <h4>Content content content!</h4>
-    </div>
+    </main>
   )
 }
 
