@@ -88,7 +88,13 @@ const Emplyees = () => {
   }]);
 
   return (
-    <div>Emplyees</div>
+    <main>
+        {
+            employees.map((employee) => {
+                <p>{employee.fullName}</p>
+            })
+        }
+    </main>
   )
 }
 
