@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 
 const Employees = () => {
+
     const [employees, setEmployees] = useState([{
     id: 1,
     fullName: "Bob Jones",
@@ -90,9 +91,9 @@ const Employees = () => {
   return (
     <main>
         {
-            employees.map((employee) => {
+            employees.map((employee) => (
                 <p>{employee.fullName}</p>
-            })
+            ))
         }
     </main>
   )
