@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 
-const Emplyees = () => {
+const Employees = () => {
     const [employees, setEmployees] = useState([{
     id: 1,
     fullName: "Bob Jones",
@@ -98,4 +98,4 @@ const Emplyees = () => {
   )
 }
 
-export default Emplyees
+export default Employees
