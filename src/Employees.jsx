@@ -94,10 +94,10 @@ const Employees = () => {
     <main className='container'>
       <div class='row justify-content-center mt-3 mb-3'>
         <div class='col-8'>
-          <div class='card-collection'></div>
+          <div class='card-collection'>
             {
               employees.map((employee) => (
-                <div id={employee.id} className='card'>
+                <div id={employee.id} className='card m-2'>
                   <img src={femaleProfile} className='card-img-top'/>
                   <div className='card-body'>
                     <h5 className='card-title'>Full Name: {employee.fullName}</h5>
