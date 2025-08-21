@@ -92,11 +92,15 @@ const Employees = () => {
     teamName: "TeamD"
   }]);
 
+  const handlerSelectTeams = (e) => {
+    setSelectedTeam(e.target.value);
+  }
+
   return (
     <main className='container'>
       <div className='row justify-content-center mt-3 mb-3'>
         <div className='col-6'>
-          <select className='form-select form-select-lg' value={selectedTeam}>
+          <select className='form-select form-select-lg' value={selectedTeam} onChange={handlerSelectTeams}>
             <option value='TeamA'>Team A</option>
             <option value='TeamB'>Team B</option>
             <option value='TeamC'>Team C</option>
