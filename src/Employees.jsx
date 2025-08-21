@@ -92,7 +92,7 @@ const Employees = () => {
 
   return (
     <main className='container'>
-      <div class='row'>
+      <div class='row justify-content-center mt-3 mb-3'>
         <div class='col-8'>
           {
             employees.map((employee) => (
