@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
-import femaleProfile from './images/femaleProfile';
-import maleProfile from './images/maleProfile';
+import femaleProfile from './images/femaleProfile.jpg';
+import maleProfile from './images/maleProfile.jpg';
 
 const Employees = () => {
 
