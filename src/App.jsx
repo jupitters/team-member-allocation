@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import GroupedTeamMembers from './GroupedTeamMembers';
 import Nav from './Nav';
+import NotFound from './NotFound';
 
 function App() {
 
@@ -129,6 +130,8 @@ function App() {
             <Route path='/' element={<Employees employees={employees} handlerEmployeeCardClick={handlerEmployeeCardClick} handlerSelectTeams={handlerSelectTeams} selectedTeam={selectedTeam} />} />
 
             <Route path='/GroupedTeamMembers' element={<GroupedTeamMembers />} />
+
+            <Route path='*' element={<NotFound />} />
 
           </Routes>
         <Footer />
