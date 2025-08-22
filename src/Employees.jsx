@@ -1,7 +1,7 @@
 import femaleProfile from './images/femaleProfile.jpg';
 import maleProfile from './images/maleProfile.jpg';
 
-const Employees = (employees, selectedTeam, handlerSelectTeams, handlerEmployeeCardClick) => {
+const Employees = ({employees, selectedTeam, handlerSelectTeams, handlerEmployeeCardClick}) => {
 
   return (
     <main className='container'>
