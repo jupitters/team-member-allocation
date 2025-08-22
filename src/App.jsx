@@ -2,7 +2,7 @@ import './App.css';
 import Header from './Header';
 import Employees from './Employees';
 import Footer from './Footer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
 
@@ -104,6 +104,18 @@ function App() {
                                             employee);
     setEmployees(transformedEmployees);
   }
+
+  useEffect(() => {
+
+    localStorage.setItem('employeeList', JSON.stringify(employees));
+
+  },[employees])
+
+  useEffect(() => {
+
+    localStorage.setItem('selectedTeam', JSON.stringify(selectedTeam));
+  
+  },[selectedTeam])
 
   return (
       <div>
