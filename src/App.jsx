@@ -107,7 +107,7 @@ function App() {
 
   return (
       <div>
-        <Header />
+        <Header selectedTeam={selectedTeam} teamMemberCount={employees.filter((employee) => employee.teamName === selectedTeam).length}/>
         <Employees employees={employees} handlerEmployeeCardClick={handlerEmployeeCardClick} handlerSelectTeams={handlerSelectTeams} selectedTeam={selectedTeam} />
         <Footer />
       </div>
