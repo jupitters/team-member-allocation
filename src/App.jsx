@@ -3,6 +3,7 @@ import Header from './Header';
 import Employees from './Employees';
 import Footer from './Footer';
 import { useState, useEffect } from 'react';
+import { Router, Route, Routes } from 'react-router-dom';
 
 function App() {
 
@@ -118,11 +119,15 @@ function App() {
   },[selectedTeam])
 
   return (
-      <div>
+      <Router>
         <Header selectedTeam={selectedTeam} teamMemberCount={employees.filter((employee) => employee.teamName === selectedTeam).length}/>
-        <Employees employees={employees} handlerEmployeeCardClick={handlerEmployeeCardClick} handlerSelectTeams={handlerSelectTeams} selectedTeam={selectedTeam} />
+          <Routes>
+            <Route path='/'>
+              <Employees employees={employees} handlerEmployeeCardClick={handlerEmployeeCardClick} handlerSelectTeams={handlerSelectTeams} selectedTeam={selectedTeam} />
+            </Route>
+          </Routes>
         <Footer />
-      </div>
+      </Router>
   )
 }
 
