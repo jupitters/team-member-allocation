@@ -122,9 +122,11 @@ function App() {
       <Router>
         <Header selectedTeam={selectedTeam} teamMemberCount={employees.filter((employee) => employee.teamName === selectedTeam).length}/>
           <Routes>
-            <Route path='/'>
-              <Employees employees={employees} handlerEmployeeCardClick={handlerEmployeeCardClick} handlerSelectTeams={handlerSelectTeams} selectedTeam={selectedTeam} />
-            </Route>
+
+            <Route path='/' element={<Employees employees={employees} handlerEmployeeCardClick={handlerEmployeeCardClick} handlerSelectTeams={handlerSelectTeams} selectedTeam={selectedTeam} />} />
+
+            <Route path='/GroupedTeamMembers' />
+
           </Routes>
         <Footer />
       </Router>
