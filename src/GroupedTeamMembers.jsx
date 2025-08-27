@@ -7,20 +7,20 @@ const GroupedTeamMembers = ({employees, selectedTeam, setSelectedTeam}) => {
     const groupTeamMembers = () => {
         let teams = [];
 
-        let teamMembers = employees.filter((employee) => employee.teamName === 'TeamA');
-        let teamA = {team:'TeamA',members:teamMembers,collapsed:selectedTeam === 'TeamA'?false:true};
+        let teamAMembers = employees.filter((employee) => employee.teamName === 'TeamA');
+        let teamA = {team:'TeamA',members:teamAMembers,collapsed:selectedTeam === 'TeamA'?false:true};
         teams.push(teamA);
 
-        teamMembers = employees.filter((employee) => employee.teamName === 'TeamB');
-        let teamB = {team:'TeamB',members:teamMembers,collapsed:selectedTeam === 'TeamB'?false:true};
+        let teamBMembers = employees.filter((employee) => employee.teamName === 'TeamB');
+        let teamB = {team:'TeamB',members:teamBMembers,collapsed:selectedTeam === 'TeamB'?false:true};
         teams.push(teamB);
 
-        teamMembers = employees.filter((employee) => employee.teamName === 'TeamC');
-        let teamC = {team:'TeamC',members:teamMembers,collapsed:selectedTeam === 'TeamC'?false:true};
+        let teamCMembers = employees.filter((employee) => employee.teamName === 'TeamC');
+        let teamC = {team:'TeamC',members:teamCMembers,collapsed:selectedTeam === 'TeamC'?false:true};
         teams.push(teamC);
 
-        teamMembers = employees.filter((employee) => employee.teamName === 'TeamD');
-        let teamD = {team:'TeamD',members:teamMembers,collapsed:selectedTeam === 'TeamD'?false:true};
+        let teamDMembers = employees.filter((employee) => employee.teamName === 'TeamD');
+        let teamD = {team:'TeamD',members:teamDMembers,collapsed:selectedTeam === 'TeamD'?false:true};
         teams.push(teamD);
 
         return teams;
