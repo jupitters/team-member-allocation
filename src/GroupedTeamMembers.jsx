@@ -22,6 +22,8 @@ const GroupedTeamMembers = ({employees, selectedTeam, setSelectedTeam}) => {
         teamMembers = employees.filter((employee) => employee.teamName === 'TeamD');
         let teamD = {team:'TeamD',members:teamMembers,collapsed:selectedTeam === 'TeamD'?false:true};
         teams.push(teamD);
+
+        return teams;
     }
 
   return (
