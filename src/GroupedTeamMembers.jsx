@@ -28,11 +28,15 @@ const GroupedTeamMembers = ({employees, selectedTeam, setSelectedTeam}) => {
 
   return (
     <main className='container'>
-        <div className='row justify-content-center mt-3 mb-4'>
-            <div className='col-8'>
+        {
+            groupedEmployees.map((item)=>{
+                return (
+                    <div key={item.team} className='card mt-2' style={{cursor:"pointer"}}>
 
-            </div>
-        </div>
+                    </div>
+                )
+            })
+        }
     </main>
   )
 }
