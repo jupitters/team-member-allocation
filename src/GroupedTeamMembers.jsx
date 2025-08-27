@@ -26,13 +26,20 @@ const GroupedTeamMembers = ({employees, selectedTeam, setSelectedTeam}) => {
         return teams;
     }
 
+    const handlerTeamClick = (event) => {
+        let transformedGroupData = groupedEmployees.map((groupedData) => groupedData.team === event.currentTarget.id?
+                                                                 {...groupedData, collapsed:!groupedData.collapsed}:groupedData);
+        setGroupedEmployees(transformedGroupData);
+        setSelectedTeam(event.currentTarget.id);
+    }
+
   return (
     <main className='container'>
         {
             groupedEmployees.map((item)=>{
                 return (
                     <div key={item.team} className='card mt-2' style={{cursor:"pointer"}}>
-                        <h4 id={item.team} className='card-header text-secondary bg-white'>
+                        <h4 id={item.team} className='card-header text-secondary bg-white' onClick={handlerTeamClick}>
                             Team Name: {item.team}
                         </h4>
                         <div id={"colapse_" + item.team} className={item.collapsed === true?"collapsed":""}>
