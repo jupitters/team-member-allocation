@@ -42,7 +42,7 @@ const GroupedTeamMembers = ({employees, selectedTeam, setSelectedTeam}) => {
                         <h4 id={item.team} className='card-header text-secondary bg-white' onClick={handlerTeamClick}>
                             Team Name: {item.team}
                         </h4>
-                        <div id={"colapse_" + item.team} className={item.collapsed === true?"collapsed":""}>
+                        <div id={"colapse_" + item.team} className={item.collapsed === true?"collapse":""}>
                             <hr />
                             {
                                 item.members.map((member) => {
