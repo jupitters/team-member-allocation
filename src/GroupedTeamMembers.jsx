@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 
 const GroupedTeamMembers = ({employees, selectedTeam, setSelectedTeam}) => {
 
-    const [groupedEmployees, setGroupedEmployees] = useState(groupTeamMembers());
-
     const groupTeamMembers = () => {
         let teams = [];
 
@@ -25,6 +23,8 @@ const GroupedTeamMembers = ({employees, selectedTeam, setSelectedTeam}) => {
 
         return teams;
     }
+    
+    const [groupedEmployees, setGroupedEmployees] = useState(groupTeamMembers());
 
     const handlerTeamClick = (event) => {
         let transformedGroupData = groupedEmployees.map((groupedData) => groupedData.team === event.currentTarget.id?
@@ -47,7 +47,7 @@ const GroupedTeamMembers = ({employees, selectedTeam, setSelectedTeam}) => {
                             {
                                 item.members.map((member) => {
                                     return (
-                                        <div className='mt-2'>
+                                        <div key={Math.random()} className='mt-2'>
                                             <h5 className='card-title mt-2'>
                                                 <span className='text-dark'>Full Name: {member.fullName}</span>
                                             </h5>
