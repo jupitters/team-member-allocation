@@ -13,9 +13,7 @@ const Employees = ({employees, selectedTeam, handlerSelectTeams, handlerEmployee
       <div className='row justify-content-center mt-3 mb-3'>
         <div className='col-8'>
           <div className='card-collection'>
-            {
               <TeamMembers employees={employees} selectedTeam={selectedTeam} handlerEmployeeCardClick={handlerEmployeeCardClick} />
-            }
           </div>
         </div>
       </div>
